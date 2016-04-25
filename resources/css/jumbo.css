@@ -1,0 +1,49 @@
+.full-screen-page {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.fluid-screen-page {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.home-page {
+    background: url("../images/me_heater_up.jpeg") top center;
+}
+
+.nav {
+    background-color: transparent;
+}
+
+.nav-focus {
+    -webkit-transition: background-color .5s ease-in-out;
+    -moz-transition: background-color .5s ease-in-out;
+    -o-transition: background-color .5s ease-in-out;
+    transition: background-color .5s ease-in-out;
+}
+
+.nav-scrolled,
+.nav-focus:hover {
+    background-color: #ffffff;
+}
+
+ul {
+    -webkit-transition: display .5s ease-in-out;
+    -moz-transition: display .5s ease-in-out;
+    -o-transition: display .5s ease-in-out;
+    transition: display .5s ease-in-out;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}

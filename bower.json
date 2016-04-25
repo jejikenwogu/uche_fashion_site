@@ -1,0 +1,24 @@
+{
+  "name": "fashion_site",
+  "authors": [
+    "John Ejike-Nwogu <jejikenwogu@zynga.com>"
+  ],
+  "description": "fashion site for uche",
+  "main": "index.html",
+  "keywords": [
+    "fashion"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.5"
+  }
+}
