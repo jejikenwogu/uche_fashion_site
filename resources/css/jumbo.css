@@ -91,14 +91,18 @@ a {
   z-index: 2;
 }
 
-#horizontal-style {
-    display: table;
-    width: 100%
+#nav {
+    text-align: justify;
 }
-#horizontal-style li {
-    display: table-cell;
+#nav:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+#nav li {
+    display: inline-block;
 }
 
-#horizontal-style a {
-  display: block;
-} 
+ul {
+  padding: 0px;
+}
