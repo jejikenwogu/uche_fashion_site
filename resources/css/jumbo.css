@@ -1,4 +1,8 @@
 @import 'https://fonts.googleapis.com/css?family=Khand';
+@font-face {
+  font-family: Henri;
+  src: url(resources/fonts/henri-didot.regular.otf);
+}
 body {
   font-family: 'Khand', sans-serif;
 }
@@ -63,6 +67,7 @@ ul {
 
 .navbar-brand {
   font-size: 25px;
+  font-family: Henri;
 }
 
 a {
