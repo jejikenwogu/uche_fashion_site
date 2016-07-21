@@ -49,27 +49,6 @@ ul {
     width: 100%;
 }
 
-.navbar-collapse.collapse{
-    display: block !important;
-}
-
-.navbar-nav>li, .navbar-nav{
-    float: left !important;
-}
-
-.navbar-nav.navbar-right:last-child{
-    margin-right: -15px !important;
-}
-
-.navbar-right{
-    float: right !important;
-}
-
-.navbar-brand {
-  font-size: 25px;
-  font-family: HenriD;
-}
-
 a {
   color: #000;
 }
@@ -114,4 +93,14 @@ a {
 
 ul {
   padding: 0px;
+}
+
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-nav > li {
+  float: none;
+  display: inline-block;
 }
