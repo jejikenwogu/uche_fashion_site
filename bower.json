@@ -20,9 +20,9 @@
   "dependencies": {
     "gsap": "^1.18.5",
     "scrollmagic": "^2.0.5",
-    "angular": "^1.5.7",
     "bootstrap": "^3.3.6",
-    "jquery": "^3.0.0"
+    "jquery": "^3.0.0",
+    "handlebars": "^4.0.5"
   },
   "private": true
 }

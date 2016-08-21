@@ -1,6 +1,7 @@
 $(document).ready(function() {
     var controller = new ScrollMagic.Controller();
 
+    /*
     var mainScene = new ScrollMagic.Scene({
     	triggerElement: '#doubleImage',
     	triggerHook: .999
@@ -8,6 +9,16 @@ $(document).ready(function() {
     .setClassToggle('#navbar', 'nav-scrolled')
     .addIndicators()
     .addTo(controller);
+    */
+
+    $( window ).scroll(function() {
+        if ($(window).scrollTop() > 0) {
+            $('.nav-focus').addClass("nav-scrolled");
+        }
+        else {
+            $('.nav-focus').removeClass("nav-scrolled");
+        }
+    });
 
     var nextScene = new ScrollMagic.Scene({
     	triggerElement: '#doubleImage',
