@@ -1,0 +1,158 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="resources/css/index.css"/>
+    <script src="resources/js/index.js"></script>
+    <script src="bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script src="bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+    <script src="bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script src="bower_components/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top nav-focus">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <!-- Burger -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-items" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <ul class="nav navbar-nav pull-right visible-xs-block">
+                <li class="zocial-cart nav-cart">(0)</li>
+            </ul>
+            <!-- Brand -->
+            <a class="navbar-brand pull-left" href="#">PLAYGROUND</a>
+        </div>
+
+        <div style="display: block;">
+            <!-- Collapses into burger -->
+            <div class="collapse navbar-collapse" id="collapsable-items">
+                <ul class="nav navbar-nav nav-center">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            shop
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">dresses</a></li>
+                            <li><a href="#">tops</a></li>
+                            <li><a href="#">outerwear</a></li>
+                            <li><a href="#">pants</a></li>
+                            <li><a href="#">skirts</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider-vertical"></li>
+                    <li><a href="#">newness</a></li>
+                    <li class="divider-vertical"></li>
+                    <li><a href="#">collections</a></li>
+                </ul>
+            </div>
+            <ul class="nav navbar-nav navbar-right hidden-xs">
+                <li><a href="#">shopping bag (0)</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="myCarousel" class="carousel slide carousel-fade full-screen-page" data-ride="carousel" data-interval="6000"
+     data-pause="false" style="width: 100vw; height: 100vh;">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="fill" style="background-image:url('resources/images/raw-7.jpg');"></div>
+        </div>
+
+        <div class="item">
+            <div class="fill" style="background-image:url('resources/images/raw-8.jpg');"></div>
+        </div>
+    </div>
+</div>
+<div id="scroll-over" class="container-fluid fluid-screen-page">
+    <img src="resources/images/raw-7.jpg" />
+</div>
+<div id="about-us" class="container-fluid fluid-screen-page">
+    <div class="row">
+        <div class="col-xs-6" style="text-align: right;">
+            <p id="mission-statement">
+                <b>PLAYGROUND</b><br/>
+                is the clothing store you never knew you needed.<br/>
+                // dedicated to the proliferation and accumulation of dope vintage rare clothes<br/>
+                // curated with purpose<br/>
+                // with a thing for color
+            </p>
+        </div>
+        <div class="col-xs-6">
+            <img src="resources/images/raw-11.jpg" style="width: 30vw;" />
+        </div>
+    </div>
+</div>
+<div class="container-fluid fluid-screen-page">
+    <img src="resources/images/raw-7.jpg" style="width: 80vw; margin: auto; display: block;" />
+    <br/>
+    <p>
+        ...to go back to elementary school [being a kid] when girls didn’t want anything but chocolate milk and for you [a boy] to hold their hand on the PLAYGROUND
+    </p>
+</div>
+<div id="picture-grid" class="container-fluid fluid-screen-page">
+    <div class="roww">
+        <img src="resources/images/raw-7.jpg" style="width: 30vw;" />
+        <img src="resources/images/raw-7.jpg" style="width: 36vw;" />
+        <img src="resources/images/raw-7.jpg" style="width: 30vw;" />
+    </div>
+    no matter
+    <div class="roww">
+        <img src="resources/images/raw-7.jpg" style="width: 30vw;" />
+        <img src="resources/images/raw-7.jpg" style="width: 36vw;" />
+        <img src="resources/images/raw-7.jpg" style="width: 30vw;" />
+    </div>
+</div>
+<div class="container-fluid fluid-screen-page" style="text-align: center; background-color: #d9edf7;">
+    <div class="row" style="padding-bottom: 3vh;">
+        <div class="col-sm-2">
+            about
+        </div>
+        <div class="col-sm-2">
+            contact
+        </div>
+        <div class="col-sm-2">
+            shipping
+        </div>
+        <div class="col-sm-2">
+            return policy
+        </div>
+        <div class="col-sm-2">
+            terms & conditions
+        </div>
+        <div class="col-sm-2">
+            privacy policy
+        </div>
+    </div>
+    <div class="row" style="padding-bottom: 3vh;">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-3">
+            facebook
+        </div>
+        <div class="col-xs-4">
+            instagram
+        </div>
+        <div class="col-xs-3">
+            tumblr
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+    &copy;|PLAYGROUND
+</div>
+</body>
+</html>

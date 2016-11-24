@@ -18,10 +18,6 @@ body {
     padding-bottom: 20px;
 }
 
-.nav {
-    background-color: transparent;
-}
-
 .nav-focus {
     -webkit-transition: background-color .5s ease-in-out;
     -moz-transition: background-color .5s ease-in-out;

@@ -1,0 +1,191 @@
+/* General */
+@import 'https://fonts.googleapis.com/css?family=Khand';
+@import 'http://weloveiconfonts.com/api/?family=zocial';
+@font-face {
+    font-family: "HenriD";
+    src: url("../fonts/henri-didot.regular.otf");
+}
+[class*="zocial-"]:before {
+    font-family: 'zocial', sans-serif;
+}
+
+body {
+    font-family: 'Khand', sans-serif;
+}
+
+.fluid-screen-page {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.full-screen-page {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Nav */
+
+nav a,
+nav a:hover,
+nav a:focus,
+nav a:visited,
+nav a:link {
+    color: black;
+}
+
+.navbar .divider-vert a::before {
+    content: "|";
+}
+
+.navbar .divider-vertical {
+    height: 1.4em;
+    margin: 15px 0px;
+    border-right: 1px solid #222222;
+    border-left: 1px solid #111111;
+}
+
+.navbar-brand {
+    font-family: "HenriD";
+    font-size: 25px;
+}
+
+@media (max-width: 767px) {
+    .navbar-collapse .nav > .divider-vertical {
+        display: none;
+    }
+}
+
+.navbar {
+    text-align: center;
+}
+
+.nav-center {
+    display: inline-block;
+    float: none;
+    text-align: left;
+}
+
+.navbar-toggle {
+    margin-left: 20px;
+}
+
+#collapsable-items {
+    text-align: left;
+}
+
+@media (max-width: 767px) {
+    .navbar-collapse .nav > .divider-vert {
+        display: none;
+    }
+}
+
+nav.navbar {
+    border: 0;
+}
+
+.nav-focus {
+    -webkit-transition: background-color .5s ease-in-out;
+    -moz-transition: background-color .5s ease-in-out;
+    -o-transition: background-color .5s ease-in-out;
+    transition: background-color .5s ease-in-out;
+}
+
+.nav-scrolled,
+.nav-focus:hover {
+    background-color: #ffffff;
+}
+
+.navbar-toggle {
+    border-color: black;
+}
+.navbar-toggle .icon-bar {
+    background-color: black;
+}
+
+.navbar-brand {
+    padding: 18px 15px;
+}
+
+.navbar-nav {
+
+}
+
+.nav-cart {
+    font-size: 23px;
+}
+
+/* carousel */
+
+.carousel,.item,.active{height:100%;}
+.carousel-inner{height:100%;}
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* home page */
+#scroll-over img {
+    margin: auto;
+    display: block;
+    width: 80vw;
+}
+
+#picture-grid div.roww:before {
+    content: "";
+    display: inline-block;
+    height: calc(36vw * .7);
+    vertical-align: middle;
+}
+
+#picture-grid {
+    text-align: center;
+}
+
+#picture-grid img {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#picture-grid .col-xs-3,
+#picture-grid .col-xs-6 {
+    padding: 0;
+}
+
+#about-us div.row {
+    height: calc(30vw * 1.51);
+}
+
+#about-us div.row div:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#about-us p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#mission-statement {
+    text-align: right;
+    width: 30vw;
+    font-size: 3.2vw;
+}
+
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-6 {
+    padding: 0;
+}
