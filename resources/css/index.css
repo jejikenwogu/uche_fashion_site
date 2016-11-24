@@ -137,13 +137,6 @@ nav.navbar {
     width: 80vw;
 }
 
-#picture-grid div.roww:before {
-    content: "";
-    display: inline-block;
-    height: calc(36vw * .7);
-    vertical-align: middle;
-}
-
 #picture-grid {
     text-align: center;
 }
