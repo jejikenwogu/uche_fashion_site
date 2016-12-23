@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="resources/css/jumbo.css"/>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script src="bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+    <script src="bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script src="bower_components/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+    <script src="bower_components/handlebars/handlebars.js"></script>
+    <script src="resources/js/index.js"></script>
+</head>
+<body>
+<nav id="navbar" class="navbar navbar-fixed-top nav-focus" role="navigation">
+    <ul class="nav navbar-nav">
+        <li class="pull-left"><a class="navbar-brand" href="#">PLAYGROUND</a></li>
+        <li>
+            <ul class="nav navbar-nav navbar-center" style="display: inline-block; float: none;">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        shop
+                    </a>
+                    <ul class="dropdown-menu" style="background-color: #fff; background-color: rgba(255,255,255,0.2);">
+                        <li><a href="#">dresses</a></li>
+                        <li><a href="#">tops</a></li>
+                        <li><a href="#">outerwear</a></li>
+                        <li><a href="#">pants</a></li>
+                        <li><a href="#">skirts</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">newness</a></li>
+                <li><a href="#">collections</a></li>
+            </ul>
+        </li>
+        <li class="social pull-right"><a href="#">shopping bag (0)</a></li>
+    </ul>
+</nav>
+
+<div id="myCarousel" class="carousel slide carousel-fade full-screen-page" data-ride="carousel" data-interval="6000"
+  data-pause="false">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="resources/images/raw-7.jpg" alt="Chania">
+        </div>
+
+        <div class="item">
+            <img src="resources/images/raw-8.jpg" alt="Chania">
+        </div>
+    </div>
+</div>
+
+<div id="doubleImage" class="fluid-screen-page" style="background-color: #fff; text-align: center; padding-top: 40px;">
+        <img style="height: 80%;" src="resources/images/raw-15.jpg"/><img style="height: 80%;" src="resources/images/raw-4.jpg"/>
+</div>
+
+<div id="singleImage" class="fluid-screen-page" style="background-color: white; padding-left: 10%">
+    <span style="display: inline-block; width: 30%;">...to go back to elementary school [being a kid] when girls didn’t want anything but chocolate milk and for you [their crush] to hold their hand on the PLAYGROUND</span>
+    <img src="resources/images/raw-15.jpg" style="height: 80%; vertical-align: middle;" />
+</div>
+
+<div class="full-screen-page" style="text-align: center;">
+    <img style="width: 90%;" src="resources/images/raw-7.jpg">
+</div>
+
+<div id="footer" class="fluid-screen-page" style="background-color: white; text-align: center;">
+    <hr style="background-color: black; border:0; height:3px; width: 98%; " />
+    <div style="width: 96%; display: inline-block;">
+    <ul id="nav">
+        <li><a href="#">about</a></li>
+        <li><a href="#">contact</a></li>
+        <li><a href="#">shipping</a></li>
+        <li><a href="#">return policy</a></li>
+        <li><a href="#">terms & conditions</a></li>
+        <li><a href="#">privacy</a></li>
+    </ul>
+    </div>
+    <div style="width: 40%; display: inline-block; margin-top: 20px;">
+    <ul id="nav">
+        <li><a href="#">instagram</a></li>
+        <li><a href="#">tumblr</a></li>
+    </ul>
+    </div>
+    <br>
+    <ul id="nav" style="display: inline-block; margin-top: 20px;">
+        <li><a href="#">@2016|Playground</a></li>
+    </ul>
+    </div>
+</div>
+</body>
+</html>
