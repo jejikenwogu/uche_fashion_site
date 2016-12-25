@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import {Product} from "./product";
 import {ProductService} from "./product.service";
 
@@ -17,13 +17,5 @@ export class ShopComponent {
     ngOnInit() {
         this.productService.getAllProducts()
             .then(products => this.products = products);
-    }
-
-    ngAfterViewInit(): void {
-        $('.grid').masonry({
-            // options
-            itemSelector: '.grid-item',
-            columnWidth: 200
-        });
     }
 }

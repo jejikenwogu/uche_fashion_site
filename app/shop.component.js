@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
 var product_service_1 = require("./product.service");
 var ShopComponent = (function () {
     function ShopComponent(productService) {
@@ -19,22 +19,15 @@ var ShopComponent = (function () {
         this.productService.getAllProducts()
             .then(function (products) { return _this.products = products; });
     };
-    ShopComponent.prototype.ngAfterViewInit = function () {
-        $('.grid').masonry({
-            // options
-            itemSelector: '.grid-item',
-            columnWidth: 200
-        });
-    };
+    ShopComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'shop-component',
+            templateUrl: 'shop.component.html',
+        }), 
+        __metadata('design:paramtypes', [product_service_1.ProductService])
+    ], ShopComponent);
     return ShopComponent;
 }());
-ShopComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'shop-component',
-        templateUrl: 'shop.component.html',
-    }),
-    __metadata("design:paramtypes", [product_service_1.ProductService])
-], ShopComponent);
 exports.ShopComponent = ShopComponent;
 //# sourceMappingURL=shop.component.js.map

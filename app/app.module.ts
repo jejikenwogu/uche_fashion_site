@@ -14,6 +14,7 @@ import {FooterComponent} from "./footer.component";
 import {CollectionsComponent} from "./collections.component";
 import {ProductService} from "./product.service";
 import {ShopComponent} from "./shop.component";
+import {ShopProductComponent} from "./shop-product.component";
 
 @NgModule({
     imports:      [ 
@@ -29,7 +30,8 @@ import {ShopComponent} from "./shop.component";
         HomeComponent,
         FooterComponent,
         CollectionsComponent,
-        ShopComponent
+        ShopComponent,
+        ShopProductComponent
     ],
     providers: [ ProductService ],
     bootstrap:    [ AppComponent ]
