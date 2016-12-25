@@ -182,3 +182,7 @@ nav.navbar {
 .col-xs-6 {
     padding: 0;
 }
+
+.navbar-collapse.collapse.ib {
+    display: inline-block !important;
+}
