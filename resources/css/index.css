@@ -183,6 +183,8 @@ nav.navbar {
     padding: 0;
 }
 
-.navbar-collapse.collapse.ib {
-    display: inline-block !important;
+@media (min-width: 768px) {
+    .navbar-collapse.collapse.ib {
+        display: inline-block !important;
+    }
 }
