@@ -1,4 +1,5 @@
 import { Component,Input } from '@angular/core';
+import {Product} from "./product";
 
 @Component({
     moduleId: module.id,
@@ -8,12 +9,20 @@ import { Component,Input } from '@angular/core';
 })
 
 export class ShopProductComponent {
+    private isReady: boolean = false;
+    @Input() product: Product;
     @Input()
     set ready(isReady: boolean) {
         if (isReady) {
-            $(".grid").masonry({
+            this.isReady = isReady;
+        }
+    }
+
+    ngAfterViewInit() {
+        if(this.isReady) {
+            $(".grid").imagesLoaded().isotope({
                 itemSelector: '.grid-item',
-                columnWidth: 220
+                //layoutMode: 'fitRows',
             });
         }
     }

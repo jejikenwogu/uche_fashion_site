@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var product_1 = require("./product");
 var product_service_1 = require("./product.service");
 var ShopComponent = (function () {
     function ShopComponent(productService) {
@@ -17,7 +18,13 @@ var ShopComponent = (function () {
     ShopComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.productService.getAllProducts()
-            .then(function (products) { return _this.products = products; });
+            .then(function (products) {
+            var tmpProduct = new product_1.Product();
+            tmpProduct.shopImage = "../resources/images/raw-11.jpg";
+            products.splice(4, 0, tmpProduct);
+            products.splice(10, 0, tmpProduct);
+            _this.products = products;
+        });
     };
     ShopComponent = __decorate([
         core_1.Component({

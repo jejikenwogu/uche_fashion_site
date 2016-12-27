@@ -16,6 +16,12 @@ export class ShopComponent {
 
     ngOnInit() {
         this.productService.getAllProducts()
-            .then(products => this.products = products);
+            .then(products => {
+                var tmpProduct = new Product();
+                tmpProduct.shopImage = "../resources/images/raw-11.jpg";
+                products.splice(4, 0, tmpProduct);
+                products.splice(10, 0, tmpProduct);
+                this.products = products;
+            });
     }
 }

@@ -9,21 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var product_1 = require("./product");
 var ShopProductComponent = (function () {
     function ShopProductComponent() {
+        this.isReady = false;
     }
     Object.defineProperty(ShopProductComponent.prototype, "ready", {
         set: function (isReady) {
             if (isReady) {
-                $(".grid").masonry({
-                    itemSelector: '.grid-item',
-                    columnWidth: 220
-                });
+                this.isReady = isReady;
             }
         },
         enumerable: true,
         configurable: true
     });
+    ShopProductComponent.prototype.ngAfterViewInit = function () {
+        if (this.isReady) {
+            $(".grid").imagesLoaded().isotope({
+                itemSelector: '.grid-item',
+            });
+        }
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', product_1.Product)
+    ], ShopProductComponent.prototype, "product", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Boolean), 

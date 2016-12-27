@@ -1,3 +1,15 @@
-<div class="grid">
-    <shop-product-component *ngFor="let product of products; let last = last;" [ready]="last"></shop-product-component>
+<div style="width: 100%; height: 30vh; background: url('../resources/images/raw-7.jpg') center; background-size: cover; margin-bottom: 10px;"></div>
+<!--
+<div class="row" style="text-align: center; margin-bottom: 10px;">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-3">view all</div>
+    <div class="col-xs-4">new arrival</div>
+    <div class="col-xs-3">sort by</div>
+    <div class="col-xs-1"></div>
+</div>
+-->
+<div style="width: 100%; text-align: center;">
+    <div class="grid" style="width: 80%; display: inline-block;">
+        <shop-product-component *ngFor="let product of products; let last = last;" [ready]="last" [product]="product"></shop-product-component>
+    </div>
 </div>
