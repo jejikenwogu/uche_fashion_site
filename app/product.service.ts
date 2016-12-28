@@ -9,8 +9,15 @@ export class ProductService {
 
     constructor(private http: Http) {}
     
-    getAllProducts(): Promise<Product[]> {
-        return this.http.get('api/products')
+    public getAllProducts(): Promise<Product[]> {
+        return this.http.get('api/products/')
+            .toPromise()
+            .then(response => response.json().data as Product[])
+            .catch(this.handleError);
+    }
+
+    public getProductsOfGarmentType(garmentType:string): Promise<Product[]> {
+        return this.http.get('api/products/?garmentType=' + garmentType)
             .toPromise()
             .then(response => response.json().data as Product[])
             .catch(this.handleError);

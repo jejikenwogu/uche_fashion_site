@@ -4,20 +4,20 @@ var InMemoryDataService = (function () {
     }
     InMemoryDataService.prototype.createDb = function () {
         var products = [
-            { id: 1, name: 'not sure', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "dress", entryTS: 0 },
-            { id: 2, name: 'what do you call it', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "dress", entryTS: 0 },
-            { id: 3, name: 'just clothes', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "dress", entryTS: 0 },
-            { id: 4, name: 'this is weird', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "dress", entryTS: 0 },
-            { id: 5, name: 'i do not like it', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "dress", entryTS: 0 },
-            { id: 6, name: 'why', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "dress", entryTS: 0 },
-            { id: 7, name: 'meh', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "dress", entryTS: 0 },
-            { id: 8, name: 'a joke', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "dress", entryTS: 0 },
-            { id: 9, name: 'fair', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "dress", entryTS: 0 },
-            { id: 10, name: 'maaar', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "dress", entryTS: 0 },
-            { id: 11, name: 'some dress', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "dress", entryTS: 0 },
-            { id: 12, name: 'a shirt', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "shirt", entryTS: 0 },
-            { id: 13, name: 'pants', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "pants", entryTS: 0 },
-            { id: 14, name: 'shoes', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "pants", entryTS: 0 }
+            { id: 1, name: 'dresses1', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "dresses", entryTS: 0 },
+            { id: 2, name: 'tops1', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "tops", entryTS: 0 },
+            { id: 3, name: 'outerwear1', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "outerwear", entryTS: 0 },
+            { id: 4, name: 'pants1', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "pants", entryTS: 0 },
+            { id: 5, name: 'skirts1', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "skirts", entryTS: 0 },
+            { id: 6, name: 'dresses2', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "dresses", entryTS: 0 },
+            { id: 7, name: 'tops2', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "tops", entryTS: 0 },
+            { id: 8, name: 'outerwear2', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "outerwear", entryTS: 0 },
+            { id: 9, name: 'pants2', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "pants", entryTS: 0 },
+            { id: 10, name: 'skirts2', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "skirts", entryTS: 0 },
+            { id: 11, name: 'dresses3', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "dresses", entryTS: 0 },
+            { id: 12, name: 'pants3', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "pants", entryTS: 0 },
+            { id: 13, name: 'outerwear3', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "outerwear", entryTS: 0 },
+            { id: 14, name: 'pants4', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "pants", entryTS: 0 }
         ];
         return { products: products };
     };

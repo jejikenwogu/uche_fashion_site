@@ -13,17 +13,22 @@ export class ShopProductComponent {
     @Input() product: Product;
     @Input()
     set ready(isReady: boolean) {
-        if (isReady) {
-            this.isReady = isReady;
-        }
+        this.isReady = isReady;
     }
 
     ngAfterViewInit() {
         if(this.isReady) {
-            $(".grid").imagesLoaded().isotope({
+            $(".grid").isotope({
                 itemSelector: '.grid-item',
-                //layoutMode: 'fitRows',
+                percentPosition: true,
+                masonry: {
+                    columnWidth: '.grid-item'
+                }
             });
         }
+    }
+
+    ngOnDestroy() {
+        console.log("destroy shop product component");
     }
 }

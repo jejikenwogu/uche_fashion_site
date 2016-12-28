@@ -16,7 +16,13 @@ var ProductService = (function () {
         this.http = http;
     }
     ProductService.prototype.getAllProducts = function () {
-        return this.http.get('api/products')
+        return this.http.get('api/products/')
+            .toPromise()
+            .then(function (response) { return response.json().data; })
+            .catch(this.handleError);
+    };
+    ProductService.prototype.getProductsOfGarmentType = function (garmentType) {
+        return this.http.get('api/products/?garmentType=' + garmentType)
             .toPromise()
             .then(function (response) { return response.json().data; })
             .catch(this.handleError);

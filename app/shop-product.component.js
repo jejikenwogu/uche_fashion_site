@@ -16,19 +16,24 @@ var ShopProductComponent = (function () {
     }
     Object.defineProperty(ShopProductComponent.prototype, "ready", {
         set: function (isReady) {
-            if (isReady) {
-                this.isReady = isReady;
-            }
+            this.isReady = isReady;
         },
         enumerable: true,
         configurable: true
     });
     ShopProductComponent.prototype.ngAfterViewInit = function () {
         if (this.isReady) {
-            $(".grid").imagesLoaded().isotope({
+            $(".grid").isotope({
                 itemSelector: '.grid-item',
+                percentPosition: true,
+                masonry: {
+                    columnWidth: '.grid-item'
+                }
             });
         }
+    };
+    ShopProductComponent.prototype.ngOnDestroy = function () {
+        console.log("destroy shop product component");
     };
     __decorate([
         core_1.Input(), 

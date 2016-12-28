@@ -188,3 +188,23 @@ nav.navbar {
         display: inline-block !important;
     }
 }
+
+.grid-item {
+    width: calc(26.66vw - 40px);
+}
+.grid-item img {
+    width: calc(26.66vw - 40px);
+}
+
+@media (max-width: 991px) {
+    .grid-item {
+        width: calc(40vw - 40px);
+    }
+    .grid-item img {
+        width: calc(40vw - 40px);
+    }
+}
+
+.grid {
+    width: 80vw;
+}

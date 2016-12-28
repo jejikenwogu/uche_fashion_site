@@ -1,6 +1,7 @@
 import { Component,Input } from '@angular/core';
 import {Product} from "./product";
 import {ProductService} from "./product.service";
+import { ActivatedRoute, Params }   from '@angular/router';
 
 @Component({
     moduleId: module.id,
@@ -10,18 +11,62 @@ import {ProductService} from "./product.service";
 })
 
 export class ShopComponent {
-    products: Product[];
+    private products: Product[];
+    private sub: any;
 
-    constructor (private productService: ProductService) { }
+    constructor (
+        private productService: ProductService,
+        private route: ActivatedRoute
+    ) { }
 
     ngOnInit() {
+        /*
+         this.route.params
+         .switchMap((params: Params) => this.heroService.getHero(+params['id']))
+         .subscribe(hero => this.hero = hero);
+         */
+        this.sub = this.route.params.subscribe(params => {
+            var garmentType = params['id'];
+            if(garmentType === undefined) {
+                this.refreshAll();
+            }
+            else {
+                this.refreshGarmentType(garmentType);
+            }
+        });
+    }
+
+    private refreshAll() {
         this.productService.getAllProducts()
             .then(products => {
-                var tmpProduct = new Product();
-                tmpProduct.shopImage = "../resources/images/raw-11.jpg";
-                products.splice(4, 0, tmpProduct);
-                products.splice(10, 0, tmpProduct);
+                var countImagesToAdd = Math.floor(products.length/5);
+                if(countImagesToAdd > 0) {
+                    var tmpProduct = new Product();
+                    tmpProduct.shopImage = "../resources/images/raw-11.jpg";
+                    for(var i = 1; i < countImagesToAdd + 1; i++) {
+                        products.splice(i*5-1, 0, tmpProduct);
+                    }
+                }
                 this.products = products;
             });
+    }
+
+    private refreshGarmentType(garmentType:string) {
+        this.productService.getProductsOfGarmentType(garmentType)
+            .then(products => {
+                var countImagesToAdd = Math.floor(products.length/5);
+                if(countImagesToAdd > 0) {
+                    var tmpProduct = new Product();
+                    tmpProduct.shopImage = "../resources/images/raw-11.jpg";
+                    for(var i = 1; i < countImagesToAdd + 1; i++) {
+                        products.splice(i*5-1, 0, tmpProduct);
+                    }
+                }
+                this.products = products;
+            });
+    }
+
+    ngOnDestroy() {
+        console.log("destroy shop component");
     }
 }

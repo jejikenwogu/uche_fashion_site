@@ -18,6 +18,7 @@ const routes: Routes = [
     { path: 'collections',  component: CollectionsComponent },
     { path: 'collection/:id',  component: HomeComponent },
     { path: 'shop',  component: ShopComponent },
+    { path: 'shop/:id',  component: ShopComponent },
 ];
 
 @NgModule({

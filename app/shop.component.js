@@ -11,20 +11,61 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var product_1 = require("./product");
 var product_service_1 = require("./product.service");
+var router_1 = require('@angular/router');
 var ShopComponent = (function () {
-    function ShopComponent(productService) {
+    function ShopComponent(productService, route) {
         this.productService = productService;
+        this.route = route;
     }
     ShopComponent.prototype.ngOnInit = function () {
         var _this = this;
+        /*
+         this.route.params
+         .switchMap((params: Params) => this.heroService.getHero(+params['id']))
+         .subscribe(hero => this.hero = hero);
+         */
+        this.sub = this.route.params.subscribe(function (params) {
+            var garmentType = params['id'];
+            if (garmentType === undefined) {
+                _this.refreshAll();
+            }
+            else {
+                _this.refreshGarmentType(garmentType);
+            }
+        });
+    };
+    ShopComponent.prototype.refreshAll = function () {
+        var _this = this;
         this.productService.getAllProducts()
             .then(function (products) {
-            var tmpProduct = new product_1.Product();
-            tmpProduct.shopImage = "../resources/images/raw-11.jpg";
-            products.splice(4, 0, tmpProduct);
-            products.splice(10, 0, tmpProduct);
+            var countImagesToAdd = Math.floor(products.length / 5);
+            if (countImagesToAdd > 0) {
+                var tmpProduct = new product_1.Product();
+                tmpProduct.shopImage = "../resources/images/raw-11.jpg";
+                for (var i = 1; i < countImagesToAdd + 1; i++) {
+                    products.splice(i * 5 - 1, 0, tmpProduct);
+                }
+            }
             _this.products = products;
         });
+    };
+    ShopComponent.prototype.refreshGarmentType = function (garmentType) {
+        var _this = this;
+        this.productService.getProductsOfGarmentType(garmentType)
+            .then(function (products) {
+            var countImagesToAdd = Math.floor(products.length / 5);
+            if (countImagesToAdd > 0) {
+                var tmpProduct = new product_1.Product();
+                tmpProduct.shopImage = "../resources/images/raw-11.jpg";
+                for (var i = 1; i < countImagesToAdd + 1; i++) {
+                    products.splice(i * 5 - 1, 0, tmpProduct);
+                }
+            }
+            _this.products = products;
+        });
+    };
+    ShopComponent.prototype.ngOnDestroy = function () {
+        console.log("destroy shop component");
     };
     ShopComponent = __decorate([
         core_1.Component({
@@ -32,7 +73,7 @@ var ShopComponent = (function () {
             selector: 'shop-component',
             templateUrl: 'shop.component.html',
         }), 
-        __metadata('design:paramtypes', [product_service_1.ProductService])
+        __metadata('design:paramtypes', [product_service_1.ProductService, router_1.ActivatedRoute])
     ], ShopComponent);
     return ShopComponent;
 }());

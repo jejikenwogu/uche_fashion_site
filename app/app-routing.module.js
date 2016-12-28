@@ -27,6 +27,7 @@ var routes = [
     { path: 'collections', component: collections_component_1.CollectionsComponent },
     { path: 'collection/:id', component: home_component_1.HomeComponent },
     { path: 'shop', component: shop_component_1.ShopComponent },
+    { path: 'shop/:id', component: shop_component_1.ShopComponent },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

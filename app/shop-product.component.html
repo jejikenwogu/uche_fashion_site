@@ -1,5 +1,5 @@
-<div *ngIf="product.id" class="grid-item" style="width: 300px; margin: 10px; margin-left: 30px; margin-top: -10px;">
-    <div style="width: 300px;">
+<div *ngIf="product.id" class="grid-item" style="margin: 10px; margin-left: 30px; margin-top: -10px;">
+    <div style="">
         <div style="transform: rotate(-90deg) translateX(-400px); transform-origin: 0 100%; text-align: left;">
             {{product.name}}
         </div>
@@ -9,6 +9,6 @@
         </div>
     </div>
 </div>
-<div *ngIf="!product.id" class="grid-item" style="width: 300px; margin-left:30px; margin-top: 10px;">
+<div *ngIf="!product.id" class="grid-item" style="margin-left:30px; margin-top: 10px;">
     <img src="{{product.shopImage}}" width="300px" height="700px" />
 </div>
