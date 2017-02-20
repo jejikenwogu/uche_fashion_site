@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+declare var ScrollMagic:any;
+declare var TweenMax:any;
+declare var Power0:any;
 
 @Component({
     moduleId: module.id,

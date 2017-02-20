@@ -1,5 +1,6 @@
-import { Component,Input } from '@angular/core';
+import { Component,Input,ElementRef } from '@angular/core';
 import {Product} from "./product";
+declare var $:any;
 
 @Component({
     moduleId: module.id,
@@ -9,26 +10,18 @@ import {Product} from "./product";
 })
 
 export class ShopProductComponent {
-    private isReady: boolean = false;
+    private ref: any;
     @Input() product: Product;
-    @Input()
-    set ready(isReady: boolean) {
-        this.isReady = isReady;
+
+    constructor(private elementRef: ElementRef) {
+        this.ref = elementRef;
     }
 
     ngAfterViewInit() {
-        if(this.isReady) {
-            $(".grid").isotope({
-                itemSelector: '.grid-item',
-                percentPosition: true,
-                masonry: {
-                    columnWidth: '.grid-item'
-                }
-            });
-        }
+        $(".grid").isotope( 'appended', this.ref.nativeElement ).isotope('layout');
     }
 
     ngOnDestroy() {
-        console.log("destroy shop product component");
+        $(".grid").isotope( 'remove', this.ref.nativeElement ).isotope('layout');
     }
 }

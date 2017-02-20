@@ -8,10 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var product_1 = require("./product");
 var product_service_1 = require("./product.service");
-var router_1 = require('@angular/router');
+var router_1 = require("@angular/router");
 var ShopComponent = (function () {
     function ShopComponent(productService, route) {
         this.productService = productService;
@@ -32,6 +32,9 @@ var ShopComponent = (function () {
             else {
                 _this.refreshGarmentType(garmentType);
             }
+        });
+        $(".grid").isotope({
+            percentPosition: true
         });
     };
     ShopComponent.prototype.refreshAll = function () {
@@ -67,15 +70,16 @@ var ShopComponent = (function () {
     ShopComponent.prototype.ngOnDestroy = function () {
         console.log("destroy shop component");
     };
-    ShopComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'shop-component',
-            templateUrl: 'shop.component.html',
-        }), 
-        __metadata('design:paramtypes', [product_service_1.ProductService, router_1.ActivatedRoute])
-    ], ShopComponent);
     return ShopComponent;
 }());
+ShopComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'shop-component',
+        templateUrl: 'shop.component.html',
+    }),
+    __metadata("design:paramtypes", [product_service_1.ProductService,
+        router_1.ActivatedRoute])
+], ShopComponent);
 exports.ShopComponent = ShopComponent;
 //# sourceMappingURL=shop.component.js.map

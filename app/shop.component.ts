@@ -2,6 +2,7 @@ import { Component,Input } from '@angular/core';
 import {Product} from "./product";
 import {ProductService} from "./product.service";
 import { ActivatedRoute, Params }   from '@angular/router';
+declare var $:any;
 
 @Component({
     moduleId: module.id,
@@ -33,6 +34,11 @@ export class ShopComponent {
             else {
                 this.refreshGarmentType(garmentType);
             }
+        });
+
+
+        $(".grid").isotope({
+            percentPosition: true
         });
     }
 
