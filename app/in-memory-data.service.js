@@ -19,7 +19,13 @@ var InMemoryDataService = (function () {
             { id: 13, name: 'outerwear3', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "outerwear", entryTS: 0 },
             { id: 14, name: 'pants4', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "pants", entryTS: 0 }
         ];
-        return { products: products };
+        var collectionOutfits = [
+            { type: 1, image1: '../resources/images/raw-11.jpg', image2: '../resources/images/raw-11.jpg', text: "yo", collection: 1 },
+            { type: 2, image1: '../resources/images/raw-11.jpg', image2: '../resources/images/raw-11.jpg', text: "yo", collection: 1 },
+            { type: 3, image1: '../resources/images/raw-11.jpg', image2: '../resources/images/raw-11.jpg', text: "yo", collection: 1 },
+            { type: 4, image1: '../resources/images/raw-11.jpg', image2: '../resources/images/raw-11.jpg', text: "yo", collection: 1 }
+        ];
+        return { products: products, collectionOutfits: collectionOutfits };
     };
     return InMemoryDataService;
 }());

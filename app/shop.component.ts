@@ -21,11 +21,6 @@ export class ShopComponent {
     ) { }
 
     ngOnInit() {
-        /*
-         this.route.params
-         .switchMap((params: Params) => this.heroService.getHero(+params['id']))
-         .subscribe(hero => this.hero = hero);
-         */
         this.sub = this.route.params.subscribe(params => {
             var garmentType = params['id'];
             if(garmentType === undefined) {
@@ -73,6 +68,6 @@ export class ShopComponent {
     }
 
     ngOnDestroy() {
-        console.log("destroy shop component");
+        this.sub.unsubscribe();
     }
 }

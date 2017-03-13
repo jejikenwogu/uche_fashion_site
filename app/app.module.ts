@@ -15,6 +15,10 @@ import {CollectionsComponent} from "./collections.component";
 import {ProductService} from "./product.service";
 import {ShopComponent} from "./shop.component";
 import {ShopProductComponent} from "./shop-product.component";
+import {CollectionComponent} from "./collection.component";
+import {CollectionService} from "./collection.service";
+import {CollectionOutfit} from "./collection-outfit";
+import {CollectionOutfitComponent} from "./collection-outfit.component";
 
 @NgModule({
     imports:      [ 
@@ -30,10 +34,12 @@ import {ShopProductComponent} from "./shop-product.component";
         HomeComponent,
         FooterComponent,
         CollectionsComponent,
+        CollectionComponent,
+        CollectionOutfitComponent,
         ShopComponent,
         ShopProductComponent
     ],
-    providers: [ ProductService ],
+    providers: [ ProductService, CollectionService ],
     bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

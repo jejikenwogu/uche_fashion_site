@@ -19,11 +19,6 @@ var ShopComponent = (function () {
     }
     ShopComponent.prototype.ngOnInit = function () {
         var _this = this;
-        /*
-         this.route.params
-         .switchMap((params: Params) => this.heroService.getHero(+params['id']))
-         .subscribe(hero => this.hero = hero);
-         */
         this.sub = this.route.params.subscribe(function (params) {
             var garmentType = params['id'];
             if (garmentType === undefined) {
@@ -68,7 +63,7 @@ var ShopComponent = (function () {
         });
     };
     ShopComponent.prototype.ngOnDestroy = function () {
-        console.log("destroy shop component");
+        this.sub.unsubscribe();
     };
     return ShopComponent;
 }());

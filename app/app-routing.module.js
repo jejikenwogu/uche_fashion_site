@@ -12,6 +12,7 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var home_component_1 = require("./home.component");
 var collections_component_1 = require("./collections.component");
+var collection_component_1 = require("./collection.component");
 var shop_component_1 = require("./shop.component");
 /*
 const routes: Routes = [
@@ -25,7 +26,7 @@ var routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: home_component_1.HomeComponent },
     { path: 'collections', component: collections_component_1.CollectionsComponent },
-    { path: 'collection/:id', component: home_component_1.HomeComponent },
+    { path: 'collection/:id', component: collection_component_1.CollectionComponent },
     { path: 'shop', component: shop_component_1.ShopComponent },
     { path: 'shop/:id', component: shop_component_1.ShopComponent },
 ];
