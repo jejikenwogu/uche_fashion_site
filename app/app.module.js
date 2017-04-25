@@ -25,6 +25,7 @@ var shop_product_component_1 = require("./shop-product.component");
 var collection_component_1 = require("./collection.component");
 var collection_service_1 = require("./collection.service");
 var collection_outfit_component_1 = require("./collection-outfit.component");
+var product_component_1 = require("./product.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -48,7 +49,8 @@ AppModule = __decorate([
             collection_component_1.CollectionComponent,
             collection_outfit_component_1.CollectionOutfitComponent,
             shop_component_1.ShopComponent,
-            shop_product_component_1.ShopProductComponent
+            shop_product_component_1.ShopProductComponent,
+            product_component_1.ProductComponent
         ],
         providers: [product_service_1.ProductService, collection_service_1.CollectionService],
         bootstrap: [app_component_1.AppComponent]

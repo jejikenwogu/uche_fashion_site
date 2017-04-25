@@ -1,0 +1,24 @@
+<img src="{{product.detailImage1}}" style="width: 30vw;" />
+<hr style="text-align: center; background-color: #000000; height: 5px; width: 97vw;">
+{{product.name}}<br/>
+{{product.price}}<br/>
+<a (click)="tabNav(0)">description</a> | <a (click)="tabNav(1)">sizing</a> | <a (click)="tabNav(2)">details</a>
+<div id="productDescription" *ngIf="tab==0">
+    productDescription
+</div>
+<div id="productSizing" *ngIf="tab==1">
+    productSizing
+</div>
+<div id="productDetails" *ngIf="tab==2">
+    productDetails
+</div>
+<button>add to bag</button><br/>
+let us know to keep a lookout for similar pieces<br/>
+<br/>
+<span style="text-align: center; display: block; padding-bottom: 5px;">yeah we're enablers</span>
+<div>
+    <img src="{{product.detailImage1}}" style="width: 25vw; float: right; margin-left: 5vw;" />
+    <img src="{{product.detailImage1}}" style="width: 25vw; float: right; margin-left: 5vw;" />
+    <img src="{{product.detailImage1}}" style="width: 25vw; float: right; margin-left: 5vw;" />
+</div>
+<div style="clear:both; padding-bottom: 20px;"></div>

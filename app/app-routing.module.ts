@@ -4,15 +4,8 @@ import {HomeComponent} from "./home.component";
 import {CollectionsComponent} from "./collections.component";
 import {CollectionComponent} from "./collection.component";
 import {ShopComponent} from "./shop.component";
+import {ProductComponent} from "./product.component";
 
-/*
-const routes: Routes = [
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: 'dashboard',  component: DashboardComponent },
-    { path: 'detail/:id', component: HeroDetailComponent },
-    { path: 'heroes',     component: HeroesComponent }
-];s
-*/
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home',  component: HomeComponent },
@@ -20,6 +13,7 @@ const routes: Routes = [
     { path: 'collection/:id',  component: CollectionComponent },
     { path: 'shop',  component: ShopComponent },
     { path: 'shop/:id',  component: ShopComponent },
+    { path: 'product/:id',  component: ProductComponent },
 ];
 
 @NgModule({

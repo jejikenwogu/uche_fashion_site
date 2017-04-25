@@ -19,6 +19,7 @@ import {CollectionComponent} from "./collection.component";
 import {CollectionService} from "./collection.service";
 import {CollectionOutfit} from "./collection-outfit";
 import {CollectionOutfitComponent} from "./collection-outfit.component";
+import {ProductComponent} from "./product.component";
 
 @NgModule({
     imports:      [ 
@@ -37,7 +38,8 @@ import {CollectionOutfitComponent} from "./collection-outfit.component";
         CollectionComponent,
         CollectionOutfitComponent,
         ShopComponent,
-        ShopProductComponent
+        ShopProductComponent,
+        ProductComponent
     ],
     providers: [ ProductService, CollectionService ],
     bootstrap:    [ AppComponent ]

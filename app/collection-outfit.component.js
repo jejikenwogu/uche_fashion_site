@@ -8,24 +8,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var collection_outfit_1 = require("./collection-outfit");
 var CollectionOutfitComponent = (function () {
     function CollectionOutfitComponent() {
     }
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', collection_outfit_1.CollectionOutfit)
-    ], CollectionOutfitComponent.prototype, "collectionOutfit", void 0);
-    CollectionOutfitComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'collection-outfit-component',
-            templateUrl: 'collection-outfit.component.html',
-        }), 
-        __metadata('design:paramtypes', [])
-    ], CollectionOutfitComponent);
     return CollectionOutfitComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", collection_outfit_1.CollectionOutfit)
+], CollectionOutfitComponent.prototype, "collectionOutfit", void 0);
+CollectionOutfitComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'collection-outfit-component',
+        templateUrl: 'collection-outfit.component.html',
+    }),
+    __metadata("design:paramtypes", [])
+], CollectionOutfitComponent);
 exports.CollectionOutfitComponent = CollectionOutfitComponent;
 //# sourceMappingURL=collection-outfit.component.js.map

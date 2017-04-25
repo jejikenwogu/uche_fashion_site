@@ -27,6 +27,18 @@ var ProductService = (function () {
             .then(function (response) { return response.json().data; })
             .catch(this.handleError);
     };
+    ProductService.prototype.getProductsOfCollection = function (collection) {
+        return this.http.get('api/collectionProducts/?collection=' + collection)
+            .toPromise()
+            .then(function (response) { return response.json().data; })
+            .catch(this.handleError);
+    };
+    ProductService.prototype.getProductById = function (id) {
+        return this.http.get('api/products/?id=^' + id + '$')
+            .toPromise()
+            .then(function (response) { return response.json().data; })
+            .catch(this.handleError);
+    };
     /*
         getProductDetails(productId:number): Promise<Product> {
     

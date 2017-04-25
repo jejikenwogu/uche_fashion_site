@@ -14,14 +14,7 @@ var home_component_1 = require("./home.component");
 var collections_component_1 = require("./collections.component");
 var collection_component_1 = require("./collection.component");
 var shop_component_1 = require("./shop.component");
-/*
-const routes: Routes = [
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: 'dashboard',  component: DashboardComponent },
-    { path: 'detail/:id', component: HeroDetailComponent },
-    { path: 'heroes',     component: HeroesComponent }
-];s
-*/
+var product_component_1 = require("./product.component");
 var routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: home_component_1.HomeComponent },
@@ -29,6 +22,7 @@ var routes = [
     { path: 'collection/:id', component: collection_component_1.CollectionComponent },
     { path: 'shop', component: shop_component_1.ShopComponent },
     { path: 'shop/:id', component: shop_component_1.ShopComponent },
+    { path: 'product/:id', component: product_component_1.ProductComponent },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

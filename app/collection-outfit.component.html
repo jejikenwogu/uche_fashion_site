@@ -3,11 +3,14 @@
 </div>
 <div *ngIf="collectionOutfit.type==2" class="container-fluid" style="padding: 2%;">
     <div [ngStyle]="{'width': '48%', 'margin-right': '2%', 'height': '80vh', 'float': 'left', 'background-image': 'url(' + collectionOutfit.image1 + ')', 'background-size': 'cover', 'background-position': 'center'}"></div>
-    <div [ngStyle]="{'width': '50%', 'height': '80vh', 'float': 'left', 'display': 'table-cell', 'vertical-align': 'middle'}">yo</div>
+    <div [ngStyle]="{'width': '50%', 'height': '80vh', 'float': 'left', 'display': 'table'}">
+        <span style="vertical-align: bottom; display: table-cell; text-align: right;">{{collectionOutfit.text}}</span>
+    </div>
 </div>
-<div *ngIf="collectionOutfit.type==3" class="container-fluid" style="padding: 2%;">
-    yo3
+<div *ngIf="collectionOutfit.type==3" style="padding: 2%; text-align: center;">
+    <div [ngStyle]="{'background-image': 'url(' + collectionOutfit.image1 + ')', 'width': '40vw', 'height': '80vh', 'display': 'inline-block', 'vertical-align': 'middle', 'margin-right': '2vw', 'background-size': 'cover', 'background-position': 'center'}"></div>
+    <div [ngStyle]="{'background-image': 'url(' + collectionOutfit.image2 + ')', 'width': '30vw', 'height': '60vh', 'display': 'inline-block', 'vertical-align': 'middle', 'margin-left': '2vw', 'background-size': 'cover', 'background-position': 'center'}"></div>
 </div>
-<div *ngIf="collectionOutfit.type==4" class="container-fluid" style="padding: 2%;">
-    yo4
+<div *ngIf="collectionOutfit.type==4" class="container-fluid" style="padding: 2%; text-align: right;">
+    <div [ngStyle]="{'background-image': 'url(' + collectionOutfit.image1 + ')', 'width': '40vw', 'height': '80vh', 'display': 'inline-block', 'background-size': 'cover', 'background-position': 'center'}"></div>
 </div>

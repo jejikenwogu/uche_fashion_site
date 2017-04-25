@@ -10,10 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var collection_service_1 = require("./collection.service");
+var product_service_1 = require("./product.service");
 var router_1 = require("@angular/router");
 var CollectionComponent = (function () {
-    function CollectionComponent(collectionService, route) {
+    function CollectionComponent(collectionService, productService, route) {
         this.collectionService = collectionService;
+        this.productService = productService;
         this.route = route;
     }
     CollectionComponent.prototype.ngOnInit = function () {
@@ -22,8 +24,11 @@ var CollectionComponent = (function () {
             var collection = params['id'];
             _this.collectionService.getCollectionOutfitsForCollection(collection)
                 .then(function (collectionOutfits) {
-                console.log(collectionOutfits);
                 _this.collectionOutfits = collectionOutfits;
+            });
+            _this.productService.getProductsOfCollection(collection)
+                .then(function (collectionProducts) {
+                _this.collectionProducts = collectionProducts;
             });
         });
     };
@@ -39,6 +44,7 @@ CollectionComponent = __decorate([
         templateUrl: 'collection.component.html',
     }),
     __metadata("design:paramtypes", [collection_service_1.CollectionService,
+        product_service_1.ProductService,
         router_1.ActivatedRoute])
 ], CollectionComponent);
 exports.CollectionComponent = CollectionComponent;

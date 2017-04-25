@@ -1,2 +1,8 @@
 <div style="height: 56px;"></div>
 <collection-outfit-component *ngFor="let collectionOutfit of collectionOutfits;" [collectionOutfit]="collectionOutfit"></collection-outfit-component>
+<div style="text-decoration: underline; text-align: right; margin: 2%; font-weight: bolder;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shop the collection
+</div>
+<div style="text-align: center;">
+    <div *ngFor="let collectionProduct of collectionProducts;" [ngStyle]="{'background-image': 'url(' + collectionProduct.shopImage + ')', 'width': '28vw', 'height': '60vh', 'margin': '2vw', 'background-size': 'cover', 'background-position': 'center', 'display': 'inline-block'}"></div>
+</div>

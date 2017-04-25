@@ -22,6 +22,20 @@ export class ProductService {
             .then(response => response.json().data as Product[])
             .catch(this.handleError);
     }
+
+    public getProductsOfCollection(collection:number): Promise<Product[]> {
+        return this.http.get('api/collectionProducts/?collection=' + collection)
+            .toPromise()
+            .then(response => response.json().data as Product[])
+            .catch(this.handleError);
+    }
+
+    public getProductById(id:number): Promise<Product[]> {
+        return this.http.get('api/products/?id=^' + id + '$')
+            .toPromise()
+            .then(response => response.json().data as Product[])
+            .catch(this.handleError);
+    }
 /*
     getProductDetails(productId:number): Promise<Product> {
 
