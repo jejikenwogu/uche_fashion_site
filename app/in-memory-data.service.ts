@@ -1,6 +1,10 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 export class InMemoryDataService implements InMemoryDbService {
     createDb() {
+        let collections = [
+            {id: 1, name: 'Collection 1'}
+        ];
+        
         let products = [
             {id: 1, name: 'dresses1', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "dresses", entryTS: 0, detailImage1: '../resources/images/raw-11.jpg', detailImage2: '../resources/images/raw-11.jpg', detailImage3: '../resources/images/raw-11.jpg', detailImage4: '../resources/images/raw-11.jpg', detailImage5: '../resources/images/raw-11.jpg', detailImage6: '../resources/images/raw-11.jpg'},
             {id: 2, name: 'tops1', shopImage: '../resources/images/raw-11.jpg', price: 100, garmentType: "tops", entryTS: 0, detailImage1: '../resources/images/raw-11.jpg', detailImage2: '../resources/images/raw-11.jpg', detailImage3: '../resources/images/raw-11.jpg', detailImage4: '../resources/images/raw-11.jpg', detailImage5: '../resources/images/raw-11.jpg', detailImage6: '../resources/images/raw-11.jpg'},

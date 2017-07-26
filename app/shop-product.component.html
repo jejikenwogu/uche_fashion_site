@@ -1,4 +1,4 @@
-<div *ngIf="product.id" class="grid-item" style="margin: 10px; margin-left: 30px; margin-top: -10px;">
+<div *ngIf="product.id" class="grid-item" style="margin: 10px; margin-left: 30px; margin-top: -10px; cursor: pointer;" [routerLink]="['/product', product.id]">
     <div style="">
         <div style="transform: rotate(-90deg) translateX(-400px); transform-origin: 0 100%; text-align: left;">
             {{product.name}}
@@ -9,6 +9,6 @@
         </div>
     </div>
 </div>
-<div *ngIf="!product.id" class="grid-item" style="margin-left:30px; margin-top: 10px;">
+<div *ngIf="!product.id" class="grid-item" style="margin-left:30px; margin-top: 10px; cursor: pointer;">
     <img src="{{product.shopImage}}" width="300px" height="700px" />
 </div>

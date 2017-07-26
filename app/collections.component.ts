@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
     moduleId: module.id,
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
     //styleUrls: [ 'nav.component.css' ],
 })
 
-export class CollectionsComponent {}
+export class CollectionsComponent {
+
+    constructor (
+        private router: Router
+    ) { }
+
+}

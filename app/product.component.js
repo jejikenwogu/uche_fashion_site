@@ -8,9 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var product_service_1 = require("./product.service");
-var router_1 = require('@angular/router');
+var router_1 = require("@angular/router");
 var product_1 = require("./product");
 var ProductComponent = (function () {
     function ProductComponent(productService, route) {
@@ -35,15 +35,16 @@ var ProductComponent = (function () {
     ProductComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();
     };
-    ProductComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'product-component',
-            templateUrl: 'product.component.html',
-        }), 
-        __metadata('design:paramtypes', [product_service_1.ProductService, router_1.ActivatedRoute])
-    ], ProductComponent);
     return ProductComponent;
 }());
+ProductComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'product-component',
+        templateUrl: 'product.component.html',
+    }),
+    __metadata("design:paramtypes", [product_service_1.ProductService,
+        router_1.ActivatedRoute])
+], ProductComponent);
 exports.ProductComponent = ProductComponent;
 //# sourceMappingURL=product.component.js.map

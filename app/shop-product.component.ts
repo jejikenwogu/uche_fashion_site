@@ -13,7 +13,9 @@ export class ShopProductComponent {
     private ref: any;
     @Input() product: Product;
 
-    constructor(private elementRef: ElementRef) {
+    constructor(
+        private elementRef: ElementRef
+    ) {
         this.ref = elementRef;
     }
 
